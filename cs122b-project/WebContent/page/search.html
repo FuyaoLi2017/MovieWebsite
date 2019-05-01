@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fabflix</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <!-- include jquery autocomplete JS  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.devbridge-autocomplete/1.4.7/jquery.autocomplete.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="../css/search.css">
+	<link rel="stylesheet" href="../css/textSearch.css">
+	
+</head>
+<body>
+<nav style="background-color:black">
+	<!-- logo -->
+	<div class="navbar-brand px-0 mx-3 mt-0">
+		<div class="d-inline-flex pr-0">
+			<div><h1 style="color: red;font-style:italic">Fabflix</h1></div>
+			
+		</div>
+	</div>
+	<div id="username" class="nav navbar-nav mx-auto"></div>
+</nav>
+
+ <nav class="navbar navbar-expand-sm sticky-top py-0 pl-2" style="background-color:gray">
+  <a style="color:blue;font-weight:bold" class="navbar-brand home ml-3 mr-2" href="search.html" id="home"></b>HOME</b></a>
+    <button class="navbar-toggler mt-1" type="button" data-toggle="collapse" data-target="#navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fa fa-bars"></i>
+    </button>
+     <button style="color:red" class="open-button" onclick="openForm()"><b>Advanced Search</b></button>
+
+<div class="form-popup" id="myForm">
+  <form  method="get" onsubmit="return false" class="form-container">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputTitle">Title</label>
+                    <input type="text" class="form-control" id="inputTitle" placeholder="Title">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputYear">Year</label>
+                    <input type="text" class="form-control" id="inputYear" placeholder="Year">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputDirector">Director</label>
+                <input type="text" class="form-control" id="inputDirector" placeholder="Director">
+            </div>
+            <div class="form-group">
+                <label for="inputStarName">Star Name</label>
+                <input type="text" class="form-control" id="inputStarName" placeholder="Star Name">
+            </div>
+            
+            <button type="submit" class="btn btn-primary" id="search">Search</button>
+            <button type="reset" onclick="closeForm()" class="btn btn-primary">Close</button>
+        </form>
+</div>
+        <ul class="navbar-nav">
+	    	<li class="nav-item mr-3 py-0">
+	    		<div><a style="color:red" class="nav-link cart" title="Shopping Cart" href="cart.html"><i class="fa fa-shopping-cart"></i></a></div>
+	    	</li>
+    	</ul>
+    </div> 
+</nav>
+
+	<div class="container input-group">
+	  <input   class="autocomplete-searchbox form-control"  id="autocomplete" type="text" placeholder="Search Movies" aria-label="Search">
+      <button class="btn rounded-0" type="submit" id="fulltext"
+	    	><i class="fa fa-search"></i></button>
+        
+    </div>	
+    
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+    <div class="container">
+        
+
+   <div class="card mb-4 box-shadow">
+         <!-- <a class="movie-detail-<%=i%>">
+             <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" src="img/background.jpg" data-holder-rendered="true">
+         </a>  -->
+         <div class="card-body">
+             <h5 class="card-title movie-title-0"></h5>
+             <h6 class="card-subtitle mb-2 text-muted movie-director-0"></h6>
+             <small class="text-muted movie-genres-0"></small>
+             <ul class="movie-stars-0"></ul>
+
+             <div class="d-flex justify-content-between align-items-center">
+                 <div class="btn-group">
+                     <button type="button" id="add-0" class="btn btn-sm btn-outline-secondary addCart-0">Add to Cart</button>
+                 </div>
+                 
+             </div>  
+         </div>
+     </div>
+ 
+
+     <div class="card mb-4 box-shadow">
+         <!-- <a class="movie-detail-<%=i%>">
+             <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" src="img/background.jpg" data-holder-rendered="true">
+         </a>  -->
+         <div class="card-body">
+             <h5 class="card-title movie-title-1"></h5>
+             <h6 class="card-subtitle mb-2 text-muted movie-director-1"></h6>
+             <small class="text-muted movie-genres-1"></small>
+             <ul class="movie-stars-1"></ul>
+
+             <div class="d-flex justify-content-between align-items-center">
+                 <div class="btn-group">
+                     <button type="button" id="add-1" class="btn btn-sm btn-outline-secondary addCart-1">Add to Cart</button>
+                 </div>
+                 
+             </div>  
+         </div>
+     </div>
+
+
+ 
+   <div class="card mb-4 box-shadow">
+         <!-- <a class="movie-detail-<%=i%>">
+             <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" src="img/background.jpg" data-holder-rendered="true">
+         </a>  -->
+         <div class="card-body">
+             <h5 class="card-title movie-title-2"></h5>
+             <h6 class="card-subtitle mb-2 text-muted movie-director-2"></h6>
+             <small class="text-muted movie-genres-2"></small>
+             <ul class="movie-stars-2"></ul>
+
+             <div class="d-flex justify-content-between align-items-center">
+                 <div class="btn-group">
+                     <button type="button" id="add-2" class="btn btn-sm btn-outline-secondary addCart-2">Add to Cart</button>
+                 </div>
+                 
+             </div>  
+         </div>
+     </div>
+
+ </div>
+
+ 
+ 
+
+   
+   
+   
+   
+     
+   
+    
+ <div class="footer" style="background-color: black; left:0">
+    <div class="container">
+
+        <div class="row">
+            <div style="color:red" class="col-md-6">
+                <b style="text-align: center; color:red">Genres</b>
+            </div>
+            <div class="col-md-6">
+                <b style="text-align: center;color:red">Titles</b>
+            </div>
+        </div>
+        <div  class="row">
+            <div class="col-md-2">
+                <ul style="color:white" class="genres-list-1">
+                </ul>
+            </div>
+            <div class="col-md-2">
+                <ul style="color:white"  class="genres-list-2">
+                </ul>
+            </div>
+            <div class="col-md-2" >
+                <ul style="color:white"  class="genres-list-3">
+                </ul>
+            </div>
+
+
+            <div class="col-md-1">
+                <ul style="color:white"  class="number-list-1">
+                </ul>
+            </div>
+            <div class="col-md-1">
+                <ul style="color:white"  class="number-list-2">
+                </ul>
+            </div>
+            <div class="col-md-1">
+                <ul  style="color:white" class="letter-list-1">
+                </ul>
+            </div>
+            <div class="col-md-1">
+                <ul style="color:white"  class="letter-list-2">
+                </ul>
+            </div>
+            <div class="col-md-1">
+                <ul style="color:white"  class="letter-list-3">
+                </ul>
+            </div>
+            <div class="col-md-1">
+                <ul style="color:white"  class="letter-list-4">
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    
+    </div>    
+
+
+  
+  
+    
+    
+    
+    
+<script>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="http://malsup.github.io/jquery.blockUI.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.devbridge-autocomplete/1.4.7/jquery.autocomplete.min.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+  	<script src="../js/search.js"></script>
+  	<script src="../js/TopMovies.js"></script>
+  	<script src="../js/advancedSearch.js"></script>
+  	<script src="../js/searchResult.js"></script>
+  	<script src="../js/textSearch.js"></script>
+  	
+  	
+</body>
+</html>

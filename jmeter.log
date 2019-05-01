@@ -1,0 +1,83 @@
+2019-03-16 21:21:46,790 INFO o.a.j.u.JMeterUtils: Setting Locale to en_EN
+2019-03-16 21:21:46,814 INFO o.a.j.JMeter: Loading user properties from: /usr/local/Cellar/jmeter/5.0/libexec/bin/user.properties
+2019-03-16 21:21:46,815 INFO o.a.j.JMeter: Loading system properties from: /usr/local/Cellar/jmeter/5.0/libexec/bin/system.properties
+2019-03-16 21:21:46,820 INFO o.a.j.JMeter: Copyright (c) 1998-2018 The Apache Software Foundation
+2019-03-16 21:21:46,820 INFO o.a.j.JMeter: Version 5.0 r1840935
+2019-03-16 21:21:46,820 INFO o.a.j.JMeter: java.version=1.8.0_191
+2019-03-16 21:21:46,820 INFO o.a.j.JMeter: java.vm.name=Java HotSpot(TM) 64-Bit Server VM
+2019-03-16 21:21:46,820 INFO o.a.j.JMeter: os.name=Mac OS X
+2019-03-16 21:21:46,820 INFO o.a.j.JMeter: os.arch=x86_64
+2019-03-16 21:21:46,820 INFO o.a.j.JMeter: os.version=10.14.3
+2019-03-16 21:21:46,820 INFO o.a.j.JMeter: file.encoding=UTF-8
+2019-03-16 21:21:46,820 INFO o.a.j.JMeter: Max memory     =1073741824
+2019-03-16 21:21:46,820 INFO o.a.j.JMeter: Available Processors =12
+2019-03-16 21:21:46,824 INFO o.a.j.JMeter: Default Locale=English (EN)
+2019-03-16 21:21:46,824 INFO o.a.j.JMeter: JMeter  Locale=English (EN)
+2019-03-16 21:21:46,824 INFO o.a.j.JMeter: JMeterHome=/usr/local/Cellar/jmeter/5.0/libexec
+2019-03-16 21:21:46,824 INFO o.a.j.JMeter: user.dir  =/Users/lifuyao/Desktop/Github/cs122b-winter19-team-10
+2019-03-16 21:21:46,824 INFO o.a.j.JMeter: PWD       =/Users/lifuyao/Desktop/Github/cs122b-winter19-team-10
+2019-03-16 21:21:46,864 INFO o.a.j.JMeter: IP: 192.168.0.12 Name: lifuyaodeMacBook-Pro.local FullName: 192.168.0.12
+2019-03-16 21:21:48,432 INFO o.a.j.g.a.LookAndFeelCommand: Installing Darcula LAF
+2019-03-16 21:21:48,444 INFO o.a.j.g.a.LookAndFeelCommand: Using look and feel: com.bulenkov.darcula.DarculaLaf [Darcula]
+2019-03-16 21:21:48,444 INFO o.a.j.JMeter: Setting LAF to: com.bulenkov.darcula.DarculaLaf
+2019-03-16 21:21:48,506 INFO o.a.j.JMeter: Loaded icon properties from org/apache/jmeter/images/icon.properties
+2019-03-16 21:21:49,194 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must contain the string: '.functions.'
+2019-03-16 21:21:49,195 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must not contain the string: '.gui.'
+2019-03-16 21:21:50,265 INFO k.a.j.JMeterPluginsUtils: JMeter-Plugins.org v.1.4.0
+2019-03-16 21:21:50,685 WARN o.a.j.g.u.MenuFactory: Configuration error, probably corrupt or missing third party library(jar)? Could not create class: kg.apc.jmeter.reporters.LoadosophiaUploaderGui.
+java.lang.NoClassDefFoundError: org/apache/commons/httpclient/methods/multipart/PartSource
+	at kg.apc.jmeter.reporters.LoadosophiaUploaderGui.init(LoadosophiaUploaderGui.java:114) ~[JMeterPlugins-Standard.jar:?]
+	at kg.apc.jmeter.reporters.LoadosophiaUploaderGui.<init>(LoadosophiaUploaderGui.java:28) ~[JMeterPlugins-Standard.jar:?]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:1.8.0_191]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[?:1.8.0_191]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_191]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[?:1.8.0_191]
+	at java.lang.Class.newInstance(Class.java:442) ~[?:1.8.0_191]
+	at org.apache.jmeter.gui.util.MenuFactory.getGUIComponent(MenuFactory.java:174) ~[ApacheJMeter_core.jar:5.0 r1840935]
+	at org.apache.jmeter.gui.util.MenuFactory.initializeMenus(MenuFactory.java:141) ~[ApacheJMeter_core.jar:5.0 r1840935]
+	at org.apache.jmeter.gui.util.MenuFactory.<clinit>(MenuFactory.java:106) ~[ApacheJMeter_core.jar:5.0 r1840935]
+	at org.apache.jmeter.control.gui.TestPlanGui.createPopupMenu(TestPlanGui.java:92) ~[ApacheJMeter_core.jar:5.0 r1840935]
+	at org.apache.jmeter.gui.tree.JMeterTreeNode.createPopupMenu(JMeterTreeNode.java:184) ~[ApacheJMeter_core.jar:5.0 r1840935]
+	at org.apache.jmeter.gui.action.EditCommand.doAction(EditCommand.java:46) ~[ApacheJMeter_core.jar:5.0 r1840935]
+	at org.apache.jmeter.gui.action.ActionRouter.performAction(ActionRouter.java:88) ~[ApacheJMeter_core.jar:5.0 r1840935]
+	at org.apache.jmeter.gui.action.ActionRouter.lambda$actionPerformed$0(ActionRouter.java:70) ~[ApacheJMeter_core.jar:5.0 r1840935]
+	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:311) [?:1.8.0_191]
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758) [?:1.8.0_191]
+	at java.awt.EventQueue.access$500(EventQueue.java:97) [?:1.8.0_191]
+	at java.awt.EventQueue$3.run(EventQueue.java:709) [?:1.8.0_191]
+	at java.awt.EventQueue$3.run(EventQueue.java:703) [?:1.8.0_191]
+	at java.security.AccessController.doPrivileged(Native Method) [?:1.8.0_191]
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74) [?:1.8.0_191]
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728) [?:1.8.0_191]
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:205) [?:1.8.0_191]
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116) [?:1.8.0_191]
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105) [?:1.8.0_191]
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101) [?:1.8.0_191]
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93) [?:1.8.0_191]
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82) [?:1.8.0_191]
+Caused by: java.lang.ClassNotFoundException: org.apache.commons.httpclient.methods.multipart.PartSource
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382) ~[?:1.8.0_191]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424) ~[?:1.8.0_191]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357) ~[?:1.8.0_191]
+	... 29 more
+2019-03-16 21:21:51,225 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2019-03-16 21:21:51,225 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2019-03-16 21:21:51,225 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2019-03-16 21:21:51,225 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2019-03-16 21:21:51,226 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
+2019-03-16 21:21:51,226 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
+2019-03-16 21:21:51,503 INFO o.a.j.e.KeyToolUtils: keytool found at 'keytool'
+2019-03-16 21:21:51,503 INFO o.a.j.p.h.p.ProxyControl: HTTP(S) Test Script Recorder SSL Proxy will use keys that support embedded 3rd party resources in file /usr/local/Cellar/jmeter/5.0/libexec/bin/proxyserver.jks
+2019-03-16 21:21:51,637 INFO o.a.j.s.FileServer: Default base='/Users/lifuyao/Desktop/Github/cs122b-winter19-team-10'
+2019-03-16 21:21:51,864 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
+2019-03-16 21:21:51,864 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to ISO-8859-1
+2019-03-16 21:21:51,864 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
+2019-03-16 21:21:51,865 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
+2019-03-16 21:22:02,346 INFO o.a.j.g.a.Load: Loading file: /Users/lifuyao/Desktop/jmeter 2/Fabflix.jmx
+2019-03-16 21:22:02,346 INFO o.a.j.s.FileServer: Set new base='/Users/lifuyao/Desktop/jmeter 2'
+2019-03-16 21:22:02,480 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2019-03-16 21:22:02,493 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+2019-03-16 21:22:02,494 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
+2019-03-16 21:22:02,496 INFO o.a.j.s.SaveService: Loading file: /Users/lifuyao/Desktop/jmeter 2/Fabflix.jmx
+2019-03-16 21:22:02,518 INFO o.a.j.p.h.c.CookieManager: Settings: Delete null: true Check: true Allow variable: true Save: false Prefix: COOKIE_
+2019-03-16 21:22:02,615 INFO o.a.j.s.FileServer: Set new base='/Users/lifuyao/Desktop/jmeter 2'

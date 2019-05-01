@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login To Fabflix</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/login.css" media="screen"/>
+	
+</head>
+<body>
+<body>
+<button style="top:20px;position:relative;left:1000px" class="button" onclick="window.location.href='login.html'"><b>CUSTOMER LOGIN</b></button>
+<button style="top:20px;position:relative;left:995px;background-color:grey" class="button" onclick="window.location.href='adminLogin.html'"><b>ADMIN LOGIN</b></button>
+<h2>Login to Fabflix</h2>
+<div class="container mt-2">
+	<div class="row">
+		<div class="col-sm"></div>
+		<div class="col-sm-5 jumbotron py-5 bg-light rounded-0">
+			<h2 class="text-center mb-4">Admin Login</h2>
+			<form id="log_form" method="post" ACTION="#">
+				<div class="form-group mb-0">
+					<label>Email</label>
+					<input type="text" class="form-control" placeholder="Enter Email" name="email"> 
+				</div>
+				
+				<div class="form-group mb-0">
+					<label>Password</label>
+					<input type="password" class="form-control" placeholder="Enter Password" id="myInput" name="password">
+					
+                     <input type="checkbox" onclick="myFunction()">Show Password
+				</div>
+						
+					
+					
+				    <div id="login_error_message"></div>
+					<input type="submit" class="btn btn-block" value="Login">
+			     	
+			</form>
+		</div>
+		<div class="col-sm"></div>
+	</div>
+</div>
+<!-- Set the method to POST to avoid showing the username/password in the URL
+     The default action is disabled to allow your own implementation. -->
+
+
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myInput");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+</script>
+<!-- include jQuery-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- include our own JS file -->
+<script src="../js/adminLogin.js"></script>
+
+</body>
+</html>

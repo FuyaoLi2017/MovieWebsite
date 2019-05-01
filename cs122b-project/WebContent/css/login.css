@@ -1,0 +1,54 @@
+@charset "UTF-8";
+
+body {
+	background-image: url("https://boygeniusreport.files.wordpress.com/2016/03/movies-tiles.jpg?quality=98&strip=all");
+}
+
+h1 {
+	font-size: 4.25rem;
+	font-weight: bold;
+}
+
+.jumbotron {  
+    font-size: 1.25rem;
+}
+
+.form-control:focus {
+	box-shadow: none;
+}
+
+.btn {
+	background-color: OrangeRed;
+	color: White;
+	font-size: 1.25rem;
+	padding: 0.25rem auto;
+}
+
+.btn:hover,
+.btn:focus {
+	background-color: Red;
+	box-shadow: none;
+}
+
+.button {
+  
+
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: black;
+  background-color: aqua;
+  border: none;
+  
+  
+}
+
+.button:hover {background-color: light-blue}
+
+.button:active {
+  background-color: grey;
+  
+  transform: translateY(4px);
+} 
+

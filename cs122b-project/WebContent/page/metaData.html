@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fabflix</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/dashboard.css" media="screen"/>
+	
+</head>
+<body>
+<nav style="background-color:black">
+	<!-- logo -->
+	<div class="navbar-brand px-0 mx-3 mt-0">
+		<div class="d-inline-flex pr-0">
+			<div><h1 style="color: red;font-style:italic">Fabflix</h1></div>
+			
+		</div>
+	</div>
+	<div id="username" class="nav navbar-nav mx-auto"></div>
+</nav>
+
+ <nav class="navbar navbar-expand-sm sticky-top py-0 pl-2" style="background-color:gray">
+   <a style="color:blue;font-weight:bold" class="navbar-brand home ml-3 mr-2" href="dashboard.html" id="home"></b>HOME</b></a>
+    <button class="navbar-toggler mt-1" type="button" data-toggle="collapse" data-target="#navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fa fa-bars"></i>
+    </button>
+</nav>    
+    
+<body>
+
+<table id=metaData_table class="table table-striped">
+    <thead>
+    <tr>
+        <th>Table Name</th>
+        <th>Attribute</th>
+        <th>Type</th>
+    </tr>
+   
+    </thead>
+
+    <!-- Table body is left empty here, will be populated with the data retrieved with single-star.js -->
+    <!-- single-star.js will find this html element by it's id "movie_table_body" -->
+    <tbody id=metaData_table_body></tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Load jQuery and Bootstrap JS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="../js/metaData.js"></script>
+
+
+<!-- Load our own JS file -->
+<!-- The path is relative to single-star.html, since these two files are in the same directory -->
+<!-- Note the url does not contain a "/" in the beginning, which means the url is relative to current path
+     otherwise the url is relative to the root path-->
+</body>
+</html>

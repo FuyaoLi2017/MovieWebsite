@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fabflix</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	
+</head>
+
+<nav style="background-color:black">
+	<!-- logo -->
+	<div class="navbar-brand px-0 mx-3 mt-0">
+		<div class="d-inline-flex pr-0">
+			<div><h1 style="color: red;font-style:italic">Fabflix</h1></div>
+			
+		</div>
+	</div>
+	<div id="username" class="nav navbar-nav mx-auto"></div>
+</nav>
+
+<nav class="navbar navbar-expand-sm sticky-top py-0 pl-2" style="background-color:gray">
+   <a style="color:blue;font-weight:bold" class="navbar-brand home ml-3 mr-2" href="dashboard.html" id="home"></b>HOME</b></a>
+    <button class="navbar-toggler mt-1" type="button" data-toggle="collapse" data-target="#navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fa fa-bars"></i>
+    </button>
+</nav>
+<body>
+<br>
+
+<h2  align="center">Add a New Star</h2>
+<br>
+<br>
+<!-- Set the method to POST to avoid username/password showing on URL
+     Disable the default action because our JS function will handle it. -->
+<div  class="container mt-2">
+	<div class="row">
+		<div class="col-sm"></div>
+		<div class="col-sm-5 jumbotron py-5  rounded-0" style="background-color:PaleTurquoise" >     
+         <form id="billing_form" method="post" action="#" >
+         <div class="form-group mb-0">
+            <label><b>Star Name</b></label><br>
+             <input id="star" type="text" placeholder="Enter star" name="starName">
+         </div>
+         <div class="form-group mb-0">
+            <label><b>Birth Year</b></label><br>
+            <input id="year" type="text" placeholder="Enter year" name="birthYear">
+         </div>
+         <br>
+    <div id="login_error_message"></div>
+    <div id="success"></div>
+    <input type="submit" class="btn btn-block" value="Add!">
+    <input class="btn btn-block" onclick="window.location.href='addNewStar.html'" value="Add More">
+</form>
+	
+			</form>
+		</div>
+		<div class="col-sm"></div>
+	</div>
+</div>
+
+
+<!-- include jQuery-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- include our own JS file -->
+<script src="../js/addNewStar.js"></script> 
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

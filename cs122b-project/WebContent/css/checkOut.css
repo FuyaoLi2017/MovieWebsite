@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+.jumbotron {  
+    font-size: 1.25rem;
+}
+
+.form-control:focus {
+	box-shadow: none;
+}
+
+.btn {
+	background-color: OrangeRed;
+	color: White;
+	font-size: 1.25rem;
+	padding: 0.25rem auto;
+}
+
+.btn:hover,
+.btn:focus {
+	background-color: Red;
+	box-shadow: none;
+}

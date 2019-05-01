@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fabflix</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="../css/addComplete.css" media="screen"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+</head>
+<body>
+<nav style="background-color:black">
+	<!-- logo -->
+	<div class="navbar-brand px-0 mx-3 mt-0">
+		<div class="d-inline-flex pr-0">
+			<div><h1 style="color: red;font-style:italic">Fabflix</h1></div>
+			
+		</div>
+	</div>
+	<div id="username" class="nav navbar-nav mx-auto"></div>
+</nav>
+
+<nav class="navbar navbar-expand-sm sticky-top py-0 pl-2" style="background-color:gray">
+   <a style="color:blue;font-weight:bold" class="navbar-brand home ml-3 mr-2" href="dashboard.html" id="home"></b>HOME</b></a>
+    <button class="navbar-toggler mt-1" type="button" data-toggle="collapse" data-target="#navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fa fa-bars"></i>
+    </button>
+</nav>
+
+
+<br>
+<h2 align="center">Continue Adding</h2>
+<br>
+<!-- Set the method to POST to avoid username/password showing on URL
+     Disable the default action because our JS function will handle it. -->
+<div class="container mt-2">
+	<div class="row">
+		<div class="col-sm"></div>
+		<div class="col-sm-5 jumbotron py-5  rounded-0" style="background-color:PaleTurquoise">     
+         <form id="movie_form" method="post" action="#">
+         <form>
+         <div class="form-group mb-0">
+            <label><b>Genre</b></label><br>
+            
+           <input type="radio" name="genreButton" id="ExistingGenre"> Existing genre: <br> <!-- <select id="genre" type="text" class="form-control" name="genreName"></select> -->
+          
+           <input id="genreName" type="text" list="genre" placeholder="Enter genre"/>
+           <datalist id="genre" class="dropdown" >
+  
+            </datalist>
+            </div>
+       
+         <br>
+          <div class="form-group mb-0">
+             
+         <input type="radio" name="genreButton" id="NewGenre">New genre:<br> <input id="genreN" type="text" placeholder="Enter genre" name="genreName">
+         </div>
+         <br>
+         <br>
+         <br>
+         <div class="form-group mb-0">
+            <label><b>Star</b></label><br>
+             <input type="radio" name="starButton" id="ExistingStar"> Existing star: <br><!-- <input id="star" type="text" placeholder="Enter star" name="starName"> -->
+             <input id="starName" type="text" placeholder="Enter Star Name" list="star" />
+           <datalist id="star">
+  
+            </datalist>
+         </div>
+          <br>
+          
+          <div id="block1" class="form-group mb-0">
+             
+         <input type="radio" name="starButton" id="NewStar">New Star:<br> <input id="starN" type="text" placeholder="Enter Star Name" name="starName">
+         </div>
+         
+         <div id="block2" class="form-group mb-0">
+             
+         <br> <input id="starBirth" type="text" placeholder="Enter Birth year" name="StarbirthYear">
+         </div>
+         <br>
+         <br>
+    <div id="login_error_message"></div>
+     <div id="success"></div>
+    <!-- <input type="submit" class="btn btn-block" value="Validate!"> -->
+    
+    <input id="add" type="submit" class="btn btn-block" value="Add!">
+     <input class="btn btn-block" onclick="window.location.href='addNewMovie.html'" value="Add More">
+</form>
+	
+			</form>
+		</div>
+		<div class="col-sm"></div>
+	</div>
+</div>
+ <script>
+
+ $(document).ready(function () {  
+	 
+     $.ajax({  
+    	 type: "GET",  
+         url: "../api/searchGenre?partialGenre=a",  
+         data: "json",  
+         success: function (ResultData) {  
+             var s = "";  
+             for (var i = 0; i < ResultData.data.length; i++) {  
+                 s += '<option value="' + ResultData.data[i].name+ '">' + ResultData.data[i].name + '</option>';  
+             }  
+             $("#genre").html(s);  
+         }  
+     });  
+ });  
+</script> 
+ <script>
+
+ $(document).ready(function () {  
+	 
+     $.ajax({  
+    	 type: "GET",  
+         url: "../api/searchStar?partialStarName=a",  
+         data: "json",  
+         success: function (ResultData) {  
+              var s="";  
+             for (var i = 0; i < ResultData.data.length; i++) {  
+                 s += '<option value="' + ResultData.data[i].name+ '">' + ResultData.data[i].name + '</option>';  
+                 
+             }  
+             $("#star").html(s);  
+         }  
+     });  
+     console.log(document.getElementById("starName").value);
+ });  
+</script> 
+ 
+
+<!-- include jQuery-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- include our own JS file -->
+<script src="../js/addComplete.js"></script> 
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

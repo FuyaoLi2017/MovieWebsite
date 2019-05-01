@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Context>
+
+    <!-- Defines a Data Source Connecting to localhost moviedb-->
+    
+    <!-- Previous resource without tomcat pooling -->
+<!--     <Resource name="jdbc/moviedb"
+              auth="Container"
+              driverClassName="com.mysql.jdbc.Driver"
+              type="javax.sql.DataSource"
+              username="mytestuser"
+              password="mypassword"
+              url="jdbc:mysql://localhost:3306/moviedb"/> -->
+              
+      <!-- Resource definition with tomcat pooling -->
+              
+     <Resource name="jdbc/moviedb" auth="Container" type="javax.sql.DataSource"
+              maxTotal="100" maxIdle="30" maxWaitMillis="10000" username="root"
+              password="123456" driverClassName="com.mysql.jdbc.Driver"
+              url="jdbc:mysql://localhost:3306/moviedb?autoReconnect=true&amp;useSSL=false&amp;cachePrepStmts=true"/>
+              
+     <Resource name="jdbc/writedb" auth="Container" type="javax.sql.DataSource"
+              maxTotal="100" maxIdle="30" maxWaitMillis="10000" username="mytestuser"
+              password="mypassword" driverClassName="com.mysql.jdbc.Driver"
+              url="jdbc:mysql://13.57.248.101:3306/moviedb?autoReconnect=true&amp;useSSL=false&amp;cachePrepStmts=true"/>
+</Context>
